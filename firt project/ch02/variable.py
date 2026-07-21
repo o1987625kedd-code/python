@@ -17,3 +17,7 @@ print(hex(12))
 print("12"*4)
 print(type("12"))
 print(int("12")*4)
+
+b = False
+print(type(b))
+
