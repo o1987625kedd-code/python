@@ -1,0 +1,4 @@
+
+f= 1.2345
+print(float.is_integer(f))
+print(f.is_integer())
