@@ -1,4 +1,21 @@
+Data = [
+    ["老張", "0911443300"],
+    ["Mary", "0928000001"],
+    ["發叔", "0431748484"],
+    ["Tom", "0912345678"],
+    ["李董", "0255111111"],
+    ["豪哥", "0977229900"],
+    ["小何", "0928888888"],
+]
+while True:
+  name = input("輸入查詢的姓名：")
+  found = False
 
-f= 1.2345
-print(float.is_integer(f))
-print(f.is_integer())
+  for person in Data:
+    if name == person[0]:
+      found = True
+      print(f"{person[0]} 的電話號碼為 {person[1]}")
+      break
+
+  if not found:
+    print(f"查無 {name} 的資料")
