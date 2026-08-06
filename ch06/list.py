@@ -36,11 +36,15 @@
 # print()
 # print(f'最大值為 {max}')
 
-lst1 = [10,20,30,40,50]
-# print(str(num := len(lst1)))
-print(num := len(lst1))
-print(type(num))
-print(f"total = {sum(lst1)}")
-big = max(lst1)
-print(str(big))
-print(f"small = {min(lst1)}")
+# lst1 = [10,20,30,40,50]
+# # print(str(num := len(lst1)))
+# print(num := len(lst1))
+# print(type(num))
+# print(f"total = {sum(lst1)}")
+# big = max(lst1)
+# print(str(big))
+# print(f"small = {min(lst1)}")
+
+s1 = "電車月票"
+s2 = 1280
+print("項目：{0},金額：{1}".format(s1,s2))
