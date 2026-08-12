@@ -1,41 +1,16 @@
-Data = [
-    ["老張", "0911443300"],
-    ["Mary", "0928000001"],
-    ["發叔", "0431748484"],
-    ["Tom", "0912345678"],
-    ["李董", "0255111111"],
-    ["豪哥", "0977229900"],
-    ["小何", "0928888888"],
-]
-while True:
-  name = input("輸入查詢的姓名：")
-  found = False
+# 01. 外層迴圈：控制總共有 5 行（x 從 1 跑到 5）
+for x in range(1, 6):
+    
+    # 02. 內層迴圈：控制每一行前面的「空白」數量（隨著行數增加，空白逐漸減少）
+    for y in range(1, 6 - x): 
+        print(' ', end='')
+        
+    # 03. 內層迴圈：控制每一行要印出的「星號」數量（幾行就印幾個星號）
+    for y in range(1, x + 1): 
+        print('*', end='')
+        
+    # 04. 換行指令：當某一行的空白跟星號都印完後，強迫游標跳到下一行
+print()
 
-<<<<<<< HEAD
-  for person in Data:
-    if name == person[0]:
-      found = True
-      print(f"{person[0]} 的電話號碼為 {person[1]}")
-      break
-
-  if not found:
-    print(f"查無 {name} 的資料")
-=======
-#讓使用者分別輸入身高(cm)及體重(kg)後，進一步計算出其身體質量指數(BMI值)，並根據下表輸出該BMI值及其分級。例如輸入身高為160公分、體重50公斤，則輸出：BMI值為19.53(顯示至小數第二位)，屬正常範圍。
-
-height = float(input("請輸入身高(cm)："))
-weight = float(input("請輸入體重(kg)："))
-BMI = weight / (height/100)**2
-if BMI <18.5:
-  print(f"BMI 值為{BMI:.2f}，屬體重過輕")
-elif 18.6 <= BMI < 24:
-  print(f"BMI 值為{BMI:.2f}，屬正常範圍")
-elif 24 <= BMI < 27:
-  print(f"BMI 值為{BMI:.2f}，屬稍重")
-elif 27 <= BMI < 30:
-  print(f"BMI 值為{BMI:.2f}，屬輕度肥胖")
-elif 30 <= BMI < 35:
-  print(f"BMI 值為{BMI:.2f}，屬中度肥胖")
-else:
-  print(f"BMI 值為{BMI:.2f}，屬重度肥胖")
->>>>>>> 78a2e55fb86b40296510435df7348e114c06db76
+# 05. 結尾空行：整個三角形印完後，在最下方多印一個空白
+# 行（可有可無）

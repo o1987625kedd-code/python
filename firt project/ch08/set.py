@@ -1,0 +1,33 @@
+# s1 = (1,2,3,1,2)
+# s2 = ("A",(2,3),4)
+# print(type(s2))
+# s3 = set(range(1,10))
+# print(type(s3))
+# print(s3)
+# s4 = set({1:"A",2:"B",3:"C"})
+# print(type(s4))
+# print(s4)
+
+set1 = {"anastasia"}
+print(set1)
+set1 = set("anastasia")
+print(set1)
+set1 = set({'貓':'cat','狗':'dog'})
+print(set1) 
+set1 = set('嘻嘻哈哈')
+# 輸出: {'嘻', '哈'} (或 {'哈', '嘻'})
+print(set1)  
+
+set1.add('笑嘻嘻')
+# 輸出: {'嘻', '哈', '笑嘻嘻'}
+print(set1)  
+set1.remove('笑嘻嘻')
+# 輸出: {'嘻', '哈'}
+print(set1)  
+set1.discard('笑嘻嘻')
+print(set1)  
+set1.update('笑嘻嘻')
+print(set1) 
+word = set1.pop() 
+print(word)
+print(set1) 
