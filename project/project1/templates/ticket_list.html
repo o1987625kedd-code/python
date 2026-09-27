@@ -9,14 +9,22 @@
   <h1>我的案件客服</h1>
   <p>案件編號：{{ ticket_number }}</p>
   {% if not submitted %}
-    <form method="post">
+    <form action="{% url 'ticket_list' %}" method="post">
       {% csrf_token %}
       <p>案件分類</p>
-      <input type="radio" id="course" name="category" value="課程">
+      <input type="radio" id="course" name="category" value="課程" required>
       <label for="course">課程</label>
       <input type="radio" id="material" name="category" value="教材">
       <label for="material">教材</label>
-      <textarea name="question" placeholder="請輸入您的問題" rows="3" cols="40"></textarea>
+      <input type="radio" id="video" name="category" value="影片">
+      <label for="video">影片</label>
+      <input type="radio" id="logistics" name="category" value="物流">
+      <label for="logistics">物流</label>
+      <input type="radio" id="enrollment" name="category" value="報名">
+      <label for="enrollment">報名</label>
+      <input type="radio" id="other" name="category" value="其他">
+      <label for="other">其他</label>
+      <textarea name="question" placeholder="請輸入您的問題" rows="3" cols="40" required></textarea>
       <input type="submit" value="送出">
     </form>
   {% else %}

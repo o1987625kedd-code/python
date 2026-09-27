@@ -4,5 +4,5 @@ from myapp import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('tickets/',views.ticket_list),
+    path('tickets/',views.ticket_list,name="ticket_list"),
 ]
