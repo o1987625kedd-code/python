@@ -15,3 +15,9 @@ class Staff(models.Model):
       settings.AUTH_USER_MODEL,
       on_delete=models.PROTECT        
     )
+    staff_number = models.CharField(max_length=20, unique=True)
+    full_name = models.CharField(max_length=50)
+    department = models.ForeignKey(
+      Department,
+      on_delete=models.PROTECT
+    )
